@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Sean Kung — online calculators and tools for spectroscopy and electron microscopy.">
+<title>Sean Kung — Spectroscopy Tools</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --muted: #5c5c5c;
+    --accent: #0b5fa5;
+    --border: #e2e2de;
+    --shadow: 0 1px 3px rgba(0,0,0,.06), 0 4px 14px rgba(0,0,0,.05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a;
+      --card: #1d2025;
+      --text: #e8e8e6;
+      --muted: #a0a0a0;
+      --accent: #6ab0e8;
+      --border: #2c3038;
+      --shadow: 0 1px 3px rgba(0,0,0,.4);
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 1.25rem 2rem;
+    flex: 1;
+  }
+  header h1 {
+    font-size: 2rem;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+  }
+  header p.tagline {
+    color: var(--muted);
+    margin-top: .4rem;
+    font-size: 1.05rem;
+    max-width: 42rem;
+  }
+  h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 2.2rem 0 1rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .06em;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  a.card {
+    display: block;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem 1.25rem 1.1rem;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: var(--shadow);
+    transition: transform .12s ease, border-color .12s ease;
+  }
+  a.card:hover, a.card:focus-visible {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+  }
+  .card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: .35rem;
+  }
+  .card p {
+    font-size: .92rem;
+    color: var(--muted);
+  }
+  footer {
+    text-align: center;
+    padding: 1.5rem 1rem 2rem;
+    font-size: .85rem;
+    color: var(--muted);
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Sean Kung</h1>
+    <p class="tagline">Online calculators and tools for spectroscopy and electron microscopy, free to use and share.</p>
+  </header>
+
+  <h2>Calculators</h2>
+  <div class="cards">
+    <a class="card" href="/ARPES-kz/">
+      <h3>ARPES k<sub>z</sub> Calculator</h3>
+      <p>Finds the exact photon energy at which photoelectrons have crystal momentum at the Brillouin zone center (&Gamma;) or boundary. Photon momentum is included, so it is also valid for hard X-ray ARPES.</p>
+    </a>
+    <a class="card" href="/Raman-Tensors/">
+      <h3>Raman Tensors</h3>
+      <p>Calculates symmetry compositions in polarization-resolved Raman scattering experiments.</p>
+    </a>
+    <a class="card" href="/UBCNion/">
+      <h3>UBC Nion Tools</h3>
+      <p>Online calculators and analysis tools for the Nion U-HERMES 200, including EELS references and electron IMFP estimates.</p>
+    </a>
+  </div>
+</main>
+<footer>
+  <a href="https://github.com/SeanK59">github.com/SeanK59</a>
+</footer>
+</body>
+</html>
